@@ -29,7 +29,7 @@ app.get('/', async function (request: Request, response: Response) {
     }
 });
 
-app.get('/pokemon/:name', async function (request: Request, response: Response) {
+app.get('/detalhes/:name', async function (request: Request, response: Response) {
     const pokemonName = request.params.name;
     
     try {
