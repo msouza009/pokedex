@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>PokeDex Unicesumar</h1>
-    <% results.forEach(pokemon => { %>
-    <div>
-        <p>Nome: <%= pokemon.name %></p>
-        <p>URL: <%= pokemon.url %></p>
+    <div class="container">
+        <h1 class="my-4 text-center">PokeDex Unicesumar</h1>
+        <div class="row justify-content-center">
+            <% results.forEach(pokemon => { %>
+            <div class="col-md-4">
+                <div class="card mb-4 text-center" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Nome: <%= pokemon.name %></h5>
+                        <img src="<%= pokemon.sprites.front_default %>" class="img-fluid" alt="Pokemon">
+                    </div>
+                    <a href="/" class="btn btn-primary">Acesse para mais Detalhes</a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
     </div>
-    <% }) %>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
