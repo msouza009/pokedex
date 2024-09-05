@@ -15,7 +15,7 @@ async function fetchPokemonDetails(pokemonUrl: string) {
 // Rota principal que lista todos os Pokémon com detalhes adicionais
 app.get('/', async function (request: Request, response: Response) {
     try {
-        const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12");
+        const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
         const data = await res.json();
 
         // Buscando detalhes de cada Pokémon
