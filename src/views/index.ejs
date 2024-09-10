@@ -17,6 +17,7 @@
                         <h5 class="card-title"><%= pokemon.name %></h5>
                         <img src="<%= pokemon.sprites.front_default %>" class="img-fluid" alt="Pokemon">
                     </div>
+                    <p class="card-text h6"><%= pokemon.order %></p>
                     <a href="/detalhes/<%= encodeURIComponent(pokemon.name) %>" class="btn btn-outline-info">Acesse para mais Detalhes</a>
                 </div>
             </div>
